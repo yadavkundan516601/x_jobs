@@ -10,12 +10,16 @@ export const addJobsToQueue = async (jobs = []) => {
   const chunks = chunkArray(jobs, config.batchSize);
 
   for (const batch of chunks) {
-    await jobQueue.addBulk(
-      batch.map((job) => ({
-        name: job.externalId || job.link || "job", // optional name
-        data: job,
-      }))
-    );
+    try {
+      await jobQueue.addBulk(
+        batch.map((job) => ({
+          name: job.externalId || job.link || "job", // optional name
+          data: job,
+        }))
+      );
+    } catch (err) {
+      console.error("Error enqueuing jobs:", err);
+    }
   }
 
   console.log(`📤 Enqueued ${jobs.length} jobs in ${chunks.length} batches.`);

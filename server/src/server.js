@@ -4,8 +4,7 @@ import dotenv from "dotenv";
 import app from "./app.js";
 import connectRedis from "./config/redis.js";
 import { logInfo, logError } from "./utils/logger.js";
-import "./cron/jobFetcher.js"; // Starts cron
-import "./workers/jobWorker.js"; // Starts queue worker
+import { connectDB } from "./config/db.js";
 
 dotenv.config();
 
@@ -15,14 +14,15 @@ const MONGO_URI = process.env.MONGO_URI;
 async function startServer() {
   try {
     // MongoDB
-    await mongoose.connect(MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await connectDB();
     logInfo("✅ MongoDB connected");
 
     // Redis
     await connectRedis();
+
+    // Start cron and workers after Redis is connected
+    await import("./cron/jobFetcher.js"); // Starts cron
+    await import("./workers/jobWorker.js"); // Starts queue worker
 
     // Express
     app.listen(PORT, () => {
