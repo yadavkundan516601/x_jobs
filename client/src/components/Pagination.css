@@ -1,0 +1,26 @@
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.pagination button {
+  background-color: #303030;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

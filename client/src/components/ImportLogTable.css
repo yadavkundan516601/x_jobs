@@ -1,0 +1,74 @@
+.log-table-wrapper {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+
+.log-table {
+  width: 100%;
+  /* min-width: 600px; */
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.log-table th,
+.log-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.log-table th {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.log-table td {
+  background-color: #181818;
+  border-bottom: 1px solid #2c2c2c;
+  color: #ccc;
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.log-table tr:hover td {
+  background-color: #242424;
+}
+
+.empty-state {
+  margin-top: 2rem;
+  text-align: center;
+  color: #999;
+}
+
+/* Pagination.css */
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+  color: #ccc;
+}
+
+.pagination button {
+  background-color: #303030;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #444;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

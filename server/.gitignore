@@ -1,0 +1,5 @@
+# environment files
+.env
+
+#node_modeules
+node_modules

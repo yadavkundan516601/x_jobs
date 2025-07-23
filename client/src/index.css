@@ -1,0 +1,69 @@
+body {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  padding: 1rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .log-table th,
+  .log-table td {
+    padding: 0.6rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .pagination button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #0f2027, #203a43);
+  background-size: 400% 400%;
+  z-index: -1;
+  animation: gradientBG 15s ease infinite;
+  opacity: 0.2; /* Subtle */
+  pointer-events: none; /* Prevent blocking interactions */
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
