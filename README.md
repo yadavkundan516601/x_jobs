@@ -104,6 +104,20 @@ npm run dev
 | ------ | ------------------ | --------------------- |
 | GET    | `/api/import-logs` | Paginated import logs |
 
+## Futue Enhancemnets [Not implemented due to Time constraint]
+
+## 🖥️ Frontend Enhancements
+
+• **Real-time Updates (Socket.IO)** - Live import progress and log updates without page refresh
+• **Advanced Filtering & Search** - Multi-field filtering with date ranges and full-text search
+• **Data Export Features** - Export logs and job data to CSV/PDF formats
+• **Loading States & UI Polish** - Skeleton screens, progress indicators, and error boundaries
+
+## ⚙️ Backend Enhancements
+
+• **API Rate Limiting** - Protect endpoints from abuse with configurable request limits
+• **Enhanced Error Handling** - Exponential backoff, retry logic, and dead letter queues
+
 ## ✨ Notes for Reviewers
 
 - The queue (`BullMQ`) is used to **offload XML parsing and job processing** from the request lifecycle.

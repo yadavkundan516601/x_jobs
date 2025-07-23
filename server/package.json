@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server.js",
-    "worker": "node src/worker/jobWorker.js"
+    "worker": "node src/workers/jobWorker.js"
   },
   "type": "module",
   "keywords": [],
