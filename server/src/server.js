@@ -1,5 +1,3 @@
-// src/server.js
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import app from "./app.js";
 import connectRedis from "./config/redis.js";

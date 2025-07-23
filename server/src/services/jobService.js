@@ -1,4 +1,3 @@
-// src/services/jobService.js
 import Job from "../models/Job.model.js";
 
 /**

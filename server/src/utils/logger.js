@@ -1,5 +1,3 @@
-// src/utils/logger.js
-
 /**
  * Logs a success/info message
  * @param  {...any} args

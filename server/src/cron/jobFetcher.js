@@ -1,4 +1,3 @@
-// src/cron/jobFetcher.js
 import cron from "node-cron";
 import { fetchJobsFromAllAPIs } from "../jobs/index.js";
 import { addJobsToQueue } from "../queues/producers.js";
